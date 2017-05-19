@@ -28,8 +28,27 @@ post '/signin' do
   @user = User.where(username:params[:username]).first
   if @user && @user.password == params[:password]
     session[:user_id] = @user.id
-  redirect '/'
+  redirect '/profile'
 else
   redirect '/signin'
 end
+end
+
+post '/profile' do
+Blog.create(title: params[:title], category: params[:category], content: params[:content])
+redirect '/profile'
+end
+
+get '/profile' do
+@blogs = Blog.all
+erb :profile
+end
+
+post '/logout' do
+session[:user_id] = nil
+    redirect '/'
+end
+
+post '/delete_acct' do
+  session[:user_id]
 end

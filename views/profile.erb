@@ -1,0 +1,31 @@
+<h1>My Blogs</h1>
+
+
+<% @blogs.each do |blog| %>
+
+<div><%= blog.title %></div>
+<div><%= blog.category %></div>
+<div><%= blog.content %></div>
+
+<% end %>
+
+
+<h2>Create a new Blog!</h2>
+<div>
+	<form action="/profile" method="post">
+		<input type="text" name="title" placeholder="Title">
+		<input type="text" name="category" placeholder="Category">
+		<input type="text" name="content" placeholder="Content">
+		<input type="submit">
+	</form>
+</div>
+
+<h4>LOGOUT</h4>
+<form action="/logout" method="post">
+<input type="submit" name="logout">
+</form>
+
+<h4>Delete your account here:</h4>
+<form action="/delete_acct" method="post">
+  <input type="submit" name="delete">
+</form>
