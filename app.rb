@@ -49,6 +49,15 @@ session[:user_id] = nil
     redirect '/'
 end
 
-post '/delete_acct' do
-  session[:user_id]
+
+post'/delete_acct' do
+  user = User.find(session[:user_id])
+  user.destroy
+  redirect '/'
+end
+
+post '/update_user_info' do
+  user = User.find(session[:user_id])
+  user.update(params[:user])
+  redirect '/profile'
 end
