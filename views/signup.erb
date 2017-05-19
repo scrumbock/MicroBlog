@@ -1,0 +1,14 @@
+<form class="login" action="/signup" method="POST">
+  <input type="text" name="username" placeholder="username">
+  <input type="text" name="password" placeholder="password">
+  <input type="submit">
+</form>
+
+
+<h2>List of Users:</h2>
+
+<% @users.each do |user| %>
+
+<div><%= user.username %></div>
+
+<% end %>
