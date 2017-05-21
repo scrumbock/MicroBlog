@@ -17,7 +17,7 @@ end
 
 post '/signup' do
 User.create(username: params[:username], password: params[:password])
-  redirect '/signup'
+  redirect '/signin'
 end
 
 get '/signin' do
@@ -40,7 +40,7 @@ redirect '/profile'
 end
 
 get '/profile' do
-@blogs = Blog.all
+@blogs = Blog.find(session[:user_id])
 erb :profile
 end
 
