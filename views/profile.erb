@@ -1,36 +1,44 @@
-<h1>My Blogs</h1>
+<div class="blogs-topline"><h1>My Blogs</h1></div>
 
+<div class="blog-box">
 <% @blogs.each do |blog| %>
-
 <div><%= blog.title %></div>
 <div><%= blog.category %></div>
 <div><%= blog.content %></div>
-
 <% end %>
+</end>
 
-<h2>Create a new Blog!</h2>
-<div>
-	<form action="/profile" method="post">
-		<input type="text" name="title" placeholder="Title">
-		<input type="text" name="category" placeholder="Category">
-		<textarea type="text" name="content" placeholder="Content"></textarea>
-		<input type="submit">
-	</form>
-</div>
+<div class="blog-create-area">
+	<h2>Create a new Blog!</h2>
+		<form action="/profile" method="post">
+			<input type="text" name="title" placeholder="Title">
+			<input type="text" name="category" placeholder="Category">
+			<textarea type="text" name="content" placeholder="Content"></textarea>
+			<input type="submit">
+		</form>
+	</div>
 
-<h4>LOGOUT</h4>
-<form action="/logout" method="post">
-<input type="submit" name="logout">
-</form>
 
+
+<div class="update-area">
 <h2>Update User Info</h2>
 <form action="/update_user_info" method="post">
 	<input type="text" name="[user]username" placeholder="username">
 	<input type="text" name="[user]password" placeholder="password">
 	<input type="submit">
 </form>
+</div>
 
+<div class="delete-area">
 <h4>Delete your account here:</h4>
 <form action="/delete_acct" method="POST">
   <input type="submit" value="DELETE">
 </form>
+</div>
+
+<div class="logout-area">
+<h4>LOGOUT</h4>
+<form action="/logout" method="post">
+<input class="logout-button"type="submit" value="logout">
+</form>
+</div>

@@ -1,6 +1,7 @@
 body {
   background-color: aliceblue;
   font-family: 'Muli', sans-serif;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -9,24 +10,122 @@ h1 {
 }
 .main-container {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
-  height: 900px;
+  height: 700px;
 }
 
 .home-title {
   margin: 0 auto;
-  width: 50%;
+  width: 100%;
+  height: 200px;
+  margin-top: 0;
   text-align: center;
 }
 
 .sign {
   margin: 10px;
   width: 100%;
+  height: 100px;
   display: flex;
+}
+
+.pic-holder {
+  background-image: url("http://www.nimmogray.com/triskelion2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 600px;
+  width: 600px;
+  border: 1px solid grey;
+  border-radius: 100%;
+  margin: 0 auto;
+}
+.sign-up, .sign-in {
+  margin: 10px;
+  padding: 10px;
+  width: 50%;
+  height: 40px;
+  text-align: center;
+  border: 2px solid grey;
   justify-content: space-between;
+  font-size: 20px;
+  color: white;
+  background-color: white;
 }
 
 a {
   text-decoration: none;
-  width: 30%;
+}
+
+.signin-banner {
+  width: 100%;
+  height: 250px;
+  text-align: center;
+  font-size: 50px;
+  color: grey;
+}
+
+.signin-form {
+  width: 75%;
+  height: 100px;
+  border: 1px solid grey;
+  background-color: white;
+  margin: 0 auto;
+}
+
+.si-button {
+  background-color: darkgreen;
+  color: white;
+  width: 100px;
+  height: 40px;
+  font-size: 22px;
+}
+
+.login {
+  font-size: 22px;
+  text-align: center;
+  padding: 20px;
+}
+
+.blogs-topline {
+  text-align: center;
+  width: 100%;
+  height: 100px;
+}
+
+.blog-box {
+  width: 75%;
+  height: 200px;
+  padding: 10px;
+  margin: 10px auto;
+  border: 1px solid grey;
+}
+
+.blog-create-area {
+  width: 75%;
+  height: 150px;
+  padding: 10px;
+  margin: 10 auto;
+  border: 1px solid grey;
+}
+
+.logout-area {
+  width: 75%;
+  height: 50px;
+  margin: 10px;
+  text-align: center;
+  padding: 10px;
+}
+
+.logout-button {
+  background-color: green;
+  color: white;
+}
+.update-area {
+  width: 75%;
+  height: 75px;
+}
+
+.delete-area {
+
 }
