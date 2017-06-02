@@ -35,12 +35,12 @@ end
 end
 
 post '/profile' do
-Blog.create(title: params[:title], category: params[:category], content: params[:content])
+Blog.create(title: params[:title], category: params[:category], content: params[:content], user_id: session[:user_id])
 redirect '/profile'
 end
 
 get '/profile' do
-@blogs = Blog.find(session[:user_id])
+@blogs = Blog.where(user_id: session[:user_id])
 erb :profile
 end
 
@@ -48,7 +48,6 @@ post '/logout' do
 session[:user_id] = nil
     redirect '/'
 end
-
 
 post'/delete_acct' do
   user = User.find(session[:user_id])

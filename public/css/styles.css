@@ -84,7 +84,7 @@ a {
 
 .blog-box {
   width: 75%;
-  height: 200px;
+  height: 100%;
   padding: 10px;
   margin: 10px auto;
   border: 1px solid grey; }
@@ -108,7 +108,7 @@ a {
 
 .update-area {
   width: 75%;
-  height: 75px; }
+  height: 100px; }
 
 .delete-area {
   width: 75%;
