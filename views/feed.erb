@@ -1,0 +1,10 @@
+<div class="feed-topline"><h1>The Feed</h1></div>
+
+<div class="feed-box">
+<% @blogs.each do |blog| %>
+<div><%= blog.title %></div>
+<div><%= blog.category %></div>
+<div><%= blog.content %></div>
+<hr>
+<% end %>
+</div>

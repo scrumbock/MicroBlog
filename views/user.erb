@@ -1,0 +1,13 @@
+<div class="this-user">
+<h2>Welcome to the page of:</h2>
+
+<div class="this-user-name"><%= @user.username %></div>
+<hr>
+<div class="this-user-box">
+<% @blog.each do |blog| %>
+<div><%= blog.title %></div>
+<div><%= blog.category %></div>
+<div><%= blog.content %></div>
+<hr>
+<% end %>
+</div>

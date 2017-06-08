@@ -1,0 +1,10 @@
+<div class="user-title">
+<h2>List of Users:</h2>
+</div>
+
+<div class="user-box">
+  <% @users.each do |user| %>
+  <div><a href="/users/ <%= user.id%>" > <%= user.username %></a></div>
+
+  <% end %>
+</div>
